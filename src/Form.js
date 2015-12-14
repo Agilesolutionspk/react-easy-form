@@ -53,6 +53,9 @@ class Form extends React.Component {
   }
 
   render() {
+    if(this.props.reload == true){
+	this.state.formData = this.props.initialData;
+    }
     return (
       <form ref="form" className={this.props.className} onSubmit={this.onSubmit}>
 	       {this.props.children}
